@@ -2,4 +2,4 @@
 
 
 # Hulk-cut
-![Image of Hulk-cut](https://s-media-cache-ak0.pinimg.com/originals/13/4d/7f/134d7f5d0c7261799386a46b062aa15a.jpgyaktocat.png)
+![Image of Hulk-cut](https://s-media-cache-ak0.pinimg.com/564x/64/7c/3c/647c3ca68a1d704a28d12e1837b801fa.jpg)
