@@ -1,10 +1,23 @@
 {
   "name": "hulk-cut",
-  "version": "0.0.1",
+  "version": "0.0.2dv",
   "description": "",
   "main": "./cut/index.js",
   "scripts": {
-    "build": "babel src -d cut"
+    "build": "babel src -d cut",
+    "gulp:dev": "gulp --enviornment development",
+    "gulp:int": "gulp --enviornment integration",
+    "gulp:prod": "gulp --enviornment production",
+    "gulp:qa": "gulp --enviornment qa",
+    "gulp:stress": "gulp --enviornment stress",
+    "build:dev": "npm run build && npm run gulp:dev ",
+    "build:int": "npm run build && npm run gulp:int",
+    "build:prod": "npm run build",
+    "build:qa": "npm run build && npm run gulp:qa",
+    "build:stress": "npm run build && npm run gulp:stress",
+    "test:unit": "mocha --compilers js:babel-core/register --recursive ./src/tests/unit/**/*.js",
+    "test:api": "mocha --compilers js:babel-core/register --recursive ./src/tests/api/**/*.js",
+    "test:e2e": "mocha --compilers js:babel-core/register --recursive ./src/tests/e2e/**/*.js"
   },
   "keywords": [],
   "author": "",
@@ -30,7 +43,6 @@
     "express": "^4.14.0",
     "express-session": "^1.14.0",
     "express-useragent": "^0.2.4",
-    "grunth": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-eslint": "^2.0.0",
@@ -54,13 +66,14 @@
     "supertest": "^1.1.0"
   },
   "dependencies": {
+    "app-root-dir": "^1.0.2",
     "async": "^2.0.0-rc.6",
     "bcrypt": "^0.8.7",
     "crypto": "0.0.3",
     "morgan": "^1.7.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
-    "superagent": "^2.2.0"
+    "superagent": "^2.2.0",
+    "grunth": "^2.0.0"
   }
 }
-

@@ -12,9 +12,8 @@ import * as http from 'http';
 import  cookieParser  from 'cookie-parser';
 import  cors  from 'cors';
 import session from 'express-session';
-import { settings } from '../../constants/constants.js';
+import { settings } from '../constants/constants.js';
 import { Secure } from './security/cut.security.passport.js';
-import * as Boom from 'boom';
 
 const morgan = require('morgan');
 const methodOverride = require('method-override');
@@ -54,9 +53,9 @@ app.use(function(err, req, res, next) {
 
 Secure(app);
 
+// Todo:fix this!
 app.use((req,res,next) => {
-    grunth.use(app)
-    req.log = grunth.hook(req);
+    req.log = require('bunyan').createLogger({name: 'myapp'});
     next();
 });
 
