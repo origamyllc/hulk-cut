@@ -8,7 +8,7 @@ import * as response  from 'cut-responses';
 const lru = require('./components/cache/lru/cut.components.cache.lru.js');
 const http = require('./components/http/cut.components.http.js');
 const rabbit = require('./components/rabbit/cut.components.rabbitmq.js')
-const  authentications = require('./middleware/security/cut.security.utils.js');
+const authentications = require('./middleware/security/cut.security.utils.js');
 
 
 export const server = cut.app;
