@@ -2,16 +2,8 @@
  * Created by prashun on 5/8/16.
  */
 const gulp = require('gulp');
-const babel = require('gulp-babel');
 const nodemon = require('gulp-nodemon');
 const args = require('./server-config.js');
-const mongoose = require('mongoose');
-const mongodev = undefined;
-const redis = require("redis");
-const relational = require('orm');
-const amqp = require('amqp');
-const path = require('path');
-const pm2 = require('pm2');
 const appRootDir = require('app-root-dir').get();
 
 import { devConfig } from  './config/env/dev';
