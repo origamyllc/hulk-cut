@@ -12,7 +12,8 @@ const authentications = require('./middleware/security/cut.security.utils.js');
 
 
 export const server = cut.app;
-
+export const http_server = cut.http_server 
+// export const https_server = cut.https_server
 // ROUTERS
 export const router = cut.router;
 
