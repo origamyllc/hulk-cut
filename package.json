@@ -1,6 +1,6 @@
 {
   "name": "hulk-cut",
-  "version": "0.0.8dv",
+  "version": "0.0.10dv",
   "description": "",
   "main": "./cut/index.js",
   "scripts": {
@@ -55,7 +55,7 @@
     "cookie-parser": "^1.4.3",
     "cookie-session": "^2.0.0-alpha.1",
     "cors": "^2.7.1",
-    "cut-responses": "0.0.4-dv",
+    "cut-responses": "0.0.6-dv",
     "errorhandler": "^1.4.3",
     "express": "^4.14.0",
     "express-session": "^1.14.0",
