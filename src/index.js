@@ -10,8 +10,14 @@ const http = require('./components/http/cut.components.http.js');
 const rabbit = require('./components/rabbit/cut.components.rabbitmq.js')
 const authentications = require('./middleware/security/cut.security.utils.js');
 
-
+// express app 
 export const server = cut.app;
+
+// http server
+export const http_server = cut.http_server 
+
+// https server 
+// export const https_server = cut.https_server
 
 // ROUTERS
 export const router = cut.router;
