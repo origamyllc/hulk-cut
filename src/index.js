@@ -4,10 +4,7 @@
 
 import * as cut from './cut/server.js';
 import * as response  from 'cut-responses';
-
-
 const authentications = require('./components/security/cut.security.utils.js');
-
 
 // express app 
 export const  $app = cut.app;
