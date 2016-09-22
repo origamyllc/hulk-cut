@@ -2,34 +2,27 @@
  * Created by prashun on 6/10/16.
  */
 
-import * as cut from './middleware/cut.express';
+import * as cut from './cut/server.js';
 import * as response  from 'cut-responses';
 
-const lru = require('./components/cache/lru/cut.components.cache.lru.js');
-const http = require('./components/http/cut.components.http.js');
-const rabbit = require('./components/rabbit/cut.components.rabbitmq.js')
-const authentications = require('./middleware/security/cut.security.utils.js');
+
+const authentications = require('./components/security/cut.security.utils.js');
+
 
 // express app 
-export const server = cut.app;
+export const  $app = cut.app;
+export const $server = cut.http_server;
+export const $router = cut.router;
 
-// http server
-export const http_server = cut.http_server 
+// cache
+export const $cache = require('cache-cow');
 
-// https server 
-// export const https_server = cut.https_server
+// transport
+export const $pubsub  = require('caeleb');
 
-// ROUTERS
-export const router = cut.router;
+//responses
+export const $res = response;
 
-// MODULES
-export const LRU = lru;
-export const RABBIT = rabbit;
-
-// HTTP
-export const HTTP = http;
-
-// UTILS
-export const responses = response;
-export const authentication =  authentications ;
+// authentication
+export const $auth =  authentications ;
 

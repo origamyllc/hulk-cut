@@ -4,11 +4,11 @@
 const objectID = require('mongodb').ObjectID;
 const mongoose = require('bluebird').promisifyAll(require('mongoose'));
 const db = mongoose.connection;
-import * as CONSTANTS from '../../../../constants/constants';
 import Promise from 'bluebird';
 import Collections from './cut.components.db.mongo.model';
 
-const url = CONSTANTS.MONGO_DB_URL;
+const url = process.env.MONGO_DB_URL ||  'mongodb://localhost/security-35';
+
 connect(url);
 
 export function connect(url) {
