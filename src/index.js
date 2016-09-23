@@ -8,7 +8,7 @@ import * as response  from 'cut-responses';
 const authentications = require('./components/security/cut.security.utils.js');
 
 // express app 
-export const $cut = cut.app;
+export const $app = cut.app;
 export const $router = cut.router;
 
 // cache
