@@ -9,7 +9,6 @@ const authentications = require('./components/security/cut.security.utils.js');
 
 // express app 
 export const $cut = cut.app;
-export const $http_server = cut.http_server;
 export const $router = cut.router;
 
 // cache
