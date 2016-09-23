@@ -1,10 +1,9 @@
-import  Collections from '../../components/db/mongo/cut.components.db.mongo.model';
-
+import { $models } from 'rikki';
 export function isAuthenticated(req,res,next){
 
     const accessToken = req.headers['authorization'];
     if(accessToken) {
-        Collections['Tokens'].findOne({
+        $models['token'].findOne({
             accessToken: accessToken
         }, function (err, token) { // don't ever give out the password or salt
             if (token) {

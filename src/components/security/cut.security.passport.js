@@ -1,7 +1,7 @@
 /**
  * Created by prashun on 6/16/16.
  */
-import  Collections from '../../components/db/mongo/cut.components.db.mongo.model';
+import { $models } from 'rikki';
 const  passport = require('passport');
 var Promise = require("bluebird");
 const LocalStrategy = require('passport-local').Strategy;
@@ -23,7 +23,7 @@ export function Secure(app) {
         });
 
         passport.deserializeUser((id, done) => {
-            Collections['Users'].findOne({
+            $models['user'].findOne({
                 _id: id
             }, function(err, user) { // don't ever give out the password or salt
                 done(err, user);
@@ -41,7 +41,7 @@ export function Secure(app) {
             usernameField: 'username',    // define the parameter in req.body that passport can use as username and password
             passwordField: 'password'
         },(username,  password, done) => {
-            Collections['Users'].findOne({
+            $models['user'].findOne({
                 username: username
             }, (err, user) => {
 
