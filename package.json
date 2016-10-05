@@ -21,7 +21,7 @@
     "babel-preset-stage-2": "^6.5.0",
     "babel-register": "^6.8.0",
     "cache-cow": "0.0.2-dv",
-    "caeleb": "0.0.1-dv",
+    "caeleb": "0.0.1-rc",
     "chai": "^3.2.0",
     "colors": "^1.1.2",
     "fs": "0.0.1-security",
